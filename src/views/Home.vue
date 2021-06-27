@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="todo-list">
+    <div class="todo-actions">
+      <button>+ Add Task</button>
+      <div class="task-status-filter">
+        <div class="active">All</div>
+        <div>Active</div>
+        <div>Completed</div>
+      </div>
+    </div>
+    <TodoListItem></TodoListItem>
+    <TodoListItem></TodoListItem>
+    <TodoListItem></TodoListItem>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import TodoListItem from "@/components/TodoListItem.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    TodoListItem,
   },
 };
 </script>
